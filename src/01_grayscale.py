@@ -19,6 +19,10 @@ try:
         # Capture frame as numpy array using underlying Picamera2 instance
         frame = cam.pc2.capture_array()
 
+        # FIX: Check if frame has 4 channels (RGBA/BGRA) and convert to 3 channels (BGR)
+        if frame.shape[2] == 4:
+            frame = cv2.cvtColor(frame, cv2.COLOR_RGBA2BGR)
+
         # Convert to grayscale
         gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         

@@ -43,6 +43,10 @@ try:
         # Capture frame
         frame = cam.pc2.capture_array()
 
+        # FIX: Check if frame has 4 channels (RGBA/BGRA) and convert to 3 channels (BGR)
+        if frame.shape[2] == 4:
+            frame = cv2.cvtColor(frame, cv2.COLOR_RGBA2BGR)
+
         # Resize frame to match histogram height for cleaner stacking (optional but looks better)
         # Let's just resize the histogram image to match the frame height if needed, 
         # or resize frame to fixed width. 

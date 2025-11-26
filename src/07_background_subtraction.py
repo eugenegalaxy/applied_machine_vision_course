@@ -23,6 +23,10 @@ try:
         # Capture frame
         frame = cam.pc2.capture_array()
 
+        # FIX: Check if frame has 4 channels (RGBA/BGRA) and convert to 3 channels (BGR)
+        if frame.shape[2] == 4:
+            frame = cv2.cvtColor(frame, cv2.COLOR_RGBA2BGR)
+
         # Apply background subtraction
         # returns a mask where 0=background, 255=foreground, 127=shadow (if detectShadows=True)
         fgmask = fgbg.apply(frame)

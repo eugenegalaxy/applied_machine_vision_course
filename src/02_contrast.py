@@ -26,6 +26,10 @@ try:
         # Capture frame
         frame = cam.pc2.capture_array()
 
+        # FIX: Check if frame has 4 channels (RGBA/BGRA) and convert to 3 channels (BGR)
+        if frame.shape[2] == 4:
+            frame = cv2.cvtColor(frame, cv2.COLOR_RGBA2BGR)
+
         # Apply contrast adjustment: New = Alpha * Old + Beta
         # convertScaleAbs handles clamping to 0-255 automatically
         contrast_frame = cv2.convertScaleAbs(frame, alpha=alpha, beta=beta)
