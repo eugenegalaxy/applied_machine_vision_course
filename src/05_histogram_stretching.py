@@ -48,8 +48,12 @@ try:
         # Stack images side-by-side
         combined = cv2.hconcat([gray_bgr, stretched_bgr])
 
-        # Display
-        cv2.imshow(f"Left: Original Gray | Right: Stretched (Min:{min_val}, Max:{max_val})", combined)
+        # Add text to the image to show min/max values instead of using window title
+        text = f"Min: {min_val}, Max: {max_val}"
+        cv2.putText(combined, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+
+        # Display with a STATIC window name
+        cv2.imshow("Left: Original Gray | Right: Stretched", combined)
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break

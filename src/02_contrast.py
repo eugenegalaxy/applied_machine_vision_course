@@ -16,7 +16,7 @@ cam = Camera()
 # 1.0 = original
 # > 1.0 = higher contrast
 # < 1.0 = lower contrast
-alpha = 1.5 
+alpha = 2
 beta = 0 # Brightness (no change)
 
 print(f"Starting Contrast script (Alpha={alpha}). Press 'q' to exit.")
