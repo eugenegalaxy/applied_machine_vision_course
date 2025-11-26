@@ -97,3 +97,10 @@ The `src/` directory contains numbered scripts corresponding to course lectures.
     *   Morphological Erosion (shrinks bright regions).
 *   `17_ORB.py`: **Lecture 3**
     *   Feature detection using ORB (Oriented FAST and Rotated BRIEF).
+
+*   `16_forward_image_warping.py`: **Lecture 4**
+    *   Demonstrates Forward Warping (Source -> Dest) and the "holes" it creates.
+*   `17_backward_image_warping.py`: **Lecture 4**
+    *   Demonstrates Backward Warping (Dest -> Source) with interpolation (Standard cv2 approach).
+*   `18_optical_flow_and_tracking.py`: **Lecture 4**
+    *   Real-time Sparse Optical Flow using Lucas-Kanade algorithm.
