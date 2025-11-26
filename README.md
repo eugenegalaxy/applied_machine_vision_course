@@ -80,3 +80,20 @@ The `src/` directory contains numbered scripts corresponding to course lectures.
     *   Binary thresholding (Object pixels = 1, Noise = 0).
 *   `07_background_subtraction.py`: **Lecture 2**
     *   Segments image into foreground and background using MOG2 subtractor.
+
+*   `08_image_blur.py`: **Lecture 3**
+    *   Applies Gaussian Blur to smooth the image.
+*   `09_remove_noise.py`: **Lecture 3**
+    *   Demonstrates noise removal using a Bilateral Filter (edge-preserving).
+*   `10_edge_detection.py`: **Lecture 3**
+    *   Detects edges using the Canny algorithm.
+*   `11_mean_filter.py`: **Lecture 3**
+    *   Applies a Mean (Average) Filter.
+*   `12_median_filter.py`: **Lecture 3**
+    *   Applies a Median Filter (effective for salt-and-pepper noise).
+*   `15_dilation.py`: **Lecture 3**
+    *   Morphological Dilation (expands bright regions).
+*   `16_erosion.py`: **Lecture 3**
+    *   Morphological Erosion (shrinks bright regions).
+*   `17_ORB.py`: **Lecture 3**
+    *   Feature detection using ORB (Oriented FAST and Rotated BRIEF).
