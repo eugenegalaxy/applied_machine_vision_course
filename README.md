@@ -19,7 +19,7 @@ This repository contains supplementary materials and code examples for the Appli
 *   **Cable Orientation**: The cable orientation is different from previous Raspberry Pi models.
     *   **Silver pins** should face the **Ethernet port**.
 *   **Official Documentation**: [Connect the Camera](https://www.raspberrypi.com/documentation/accessories/camera.html#connect-the-camera)
-*   **Fan must be enabled!**: sudo nano /boot/firmware/config.txt and add line "dtparam=cooling_fan=on". Reboot system with "sudo reboot".
+*   **if fan is not working automatically**: sudo nano /boot/firmware/config.txt and add line "dtparam=cooling_fan=on". Reboot system with "sudo reboot".
 
 ## Pre-requisites & Setup Guide (already prepared for you except Wi-Fi)
 
